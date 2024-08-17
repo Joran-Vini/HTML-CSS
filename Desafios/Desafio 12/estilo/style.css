@@ -19,7 +19,7 @@ header > h1 {
     padding-top: 50px;
     font-family: "Passion One", sans-serif;
     font-variant: small-caps;
-    font-size: 3em;
+    font-size: 7vw;
     font-weight: 700;
 }
 header > p > a {
@@ -33,7 +33,7 @@ header > p > a:hover {
 }
 main > p {
 font-family: "Sriracha", cursive;
-  font-size: 1.3em;
+  font-size: 3.5vw;
   padding-top: 10vh;
   padding-bottom: 10vh;
   
