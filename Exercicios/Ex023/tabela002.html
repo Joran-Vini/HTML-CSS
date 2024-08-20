@@ -11,6 +11,7 @@
         table{
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
         caption {
             font-size: 1.5em;
@@ -18,9 +19,17 @@
             padding: 5px;
             background-color: lightgray;
         }
+        thead > tr >th {
+            position: sticky;
+            top: -1px;
+            background-color: black;
+        }
         td, th {
             border: 1px solid black;
             padding: 10px;
+        }
+        tbody > tr:nth-child(2n) {
+background-color: lightgray;
         }
         thead, tfoot {
             background-color: black;
