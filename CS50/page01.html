@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="stylestrivia.css" rel="stylesheet">
+    <title>Trivia!</title>
+    <script>
+        // TODO: Add code to check answers to questions
+        function checkAnswer(button) {
+            var answer = button.getAttribute('data-answer');
+            var response = document.getElementById('response');
+
+            if (answer == 'correct') {
+                button.style.backgroundColor = 'green';
+                response.innerHTML = 'Correct!';
+                response.style.color = 'green';
+            }
+            else {
+                button.style.backgroundColor = 'red';
+                response.innerHTML = 'Wrong!';
+                response.style.color = 'red';
+            }
+        }
+
+        function checkTextAnswer() {
+         var input = document.getElementById('text-answer');
+         var response = document.getElementById('text-response');
+         var answer = input.value;
+
+         if (answer.toLowerCase() == 'spiritfarer') {
+            input.style.backgroundColor = 'green';
+            response.innerHTML = 'Correct!';
+            response.style.backgroundColor = 'green';
+         }
+         else {
+            input.style.backgroundColor = 'red';
+            response.innerHTML = 'Wrong!';
+            response.style.backgroundColor = 'red';
+         }
+        }
+    </script>
+</head>
+<body>
+  <header>
+      
+  </header> 
+  <main>
+    <div class="header">
+        <h1>Trivia!</h1>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>Part 1: Multiple Choice </h2>
+            <h3>What's the best starter?</h3>
+            <button data-answer="correct" onclick="checkAnswer(this)">Squirtle</button>
+            <button data-answer="incorrect" onclick="checkAnswer(this)">Charmander</button>
+            <button data-answer="incorrect" onclick="checkAnswer(this)">Bulbassaur</button>
+            <div id="response"></div>
+            <!-- TODO: Add multiple choice question here -->
+        </div>
+
+        <div class="section">
+            <h2>Part 2: Free Response</h2>
+            <hr>
+            <h3>What's the best game of all time?</h3>
+            <input type="text" id="text-answer">
+            <button onclick="checkTextAnswer()">Submit</button>
+            <div id="text-response"></div>
+            <!-- TODO: Add free response question here -->
+        </div>
+    </div>
+  </main>
+  <footer>
+      <p><a href="index.html">Return!</a></p>
+      <p><a href="page02.html">Page02</a></p>
+      <p><a href="page03.html">Page 03</a></p>
+  </footer>
+</body>
+</html>
